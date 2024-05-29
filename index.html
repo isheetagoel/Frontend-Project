@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vovance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #05284A;
+        }   
+
+
+        header {
+            
+            background: white;
+            color: black;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #info{
+            background-color: #05284A;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            margin-left: 160px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .container img {
+            margin-left: 160px;
+            margin-right: 20px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: 1px solid #62BC9A;
+            border-radius: 30px;
+            height: 45px;
+            width: 400px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a, nav ul li button {
+            color: black;
+            text-decoration: none;
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        nav ul li button {
+            background-color: #05284A;
+            color: white;
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        #hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 4rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        #hero-text {
+            text-align: left;
+            margin-left: 120px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-left: 2rem;
+        }
+
+        #hero p {
+            color: #C2C3C3;
+            margin-left: 2rem;
+        }
+
+        #free {
+            background-color: #05386A;
+            color: white;
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        #solvers {
+            margin-top: -20px;
+            text-align: center;
+            font-size: 2.5rem;
+            width: 100%;
+            color: white;
+        font-size: 2.5rem;
+
+        }
+
+        #services, #testimonials {
+            padding: 2rem 1rem;
+            text-align: left;
+            color: #05284A;
+            background-color: white;
+        }
+
+        .service {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .service img {
+            flex: 0 0 380px;
+            height: auto;
+            margin-right: 20px; 
+        }
+
+        .service div {
+            flex: 1;
+            padding: 1rem;
+            margin-right: 50px;
+        }
+
+
+
+        .ai{
+            margin-top: 20px;
+            margin-left: 120px;
+            height: 20px;
+            width: 10px;
+            border-radius: 30px;
+        }
+
+        #handshake {
+            margin-top: 70px;
+            margin-right: 100px;
+
+        }
+        #navi{
+            margin-top: 50px;
+            margin-left: 120px;
+        }
+
+        .service h3 {
+            font-size: 1.5rem; 
+        }
+
+        .service p {
+            font-size: 1.1rem;
+        }
+
+        .service h1{
+            font-size: 2rem;
+        }
+
+
+        footer {
+            background-color: #05284A;
+            height: 30px;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            padding-bottom: 2rem;
+        }
+
+        center{
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        #about {
+            background-color: #F9FBFF;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        #about img {
+            float: left;
+            margin-right: 20px;
+            margin-left: 70px;
+            max-width: 50%;
+            height: auto;
+        }
+
+        #about h2, #about h3, #about p {
+            font-size: 1.2rem; 
+        }
+
+        #about .statistics {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: #62BC9A;
+            font-size: 1.5rem; 
+
+        }
+
+        #about .statistics p {
+            text-align: center;
+        }
+
+        #philosophy{
+            background-color: white;
+        }
+
+        #philosophy {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        #philosophy img {
+            max-width: 50%;
+            margin-left: 2rem;
+            margin-right: 120px;
+        }
+
+        #philosophy h2,
+        #philosophy p,
+        #philosophy h3,
+        #philosophy h1 {
+            max-width: 45%;
+            margin-right: 2rem;
+            margin-left: 120px;
+        }
+
+        #philo{
+            height: 200px;
+            width: 300px;
+            margin-right: 50px;
+        }
+        
+        * {box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mySlides {
+    flex: 1 0 24%;
+    display: none;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.mySlides img {
+    width: auto; /* Let the width adjust automatically */
+    max-width: 100%; /* Limit the maximum width to 100% */
+    max-height: 150px; /* Set a maximum height for consistency */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.active {
+    display: block !important;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.mySlides {
+            display: inline-block;
+            width: 30%; /* Adjust the width as needed */
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .mySlides img {
+            width: 60px;
+            height: 180px;
+        }
+        .mySlides img {
+    width: 100%;
+    height: 100%; /* Change height to 100% */
+}
+
+
+        #clients{
+            background-color: white;
+            margin-top: -20px;
+
+        }
+
+        #client{
+            color:#05284A;
+            margin-top: 20px;
+            padding: 2rem;
+            
+        }
+        .faq-container {
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin: 2rem auto;
+        }
+
+        .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 2rem 0;
+    text-align: left;
+    background-color: #F9FBFF; /* Set background color */
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    margin-left: 60px;
+}
+
+.faq-question::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    background-color: #F9FBFF;
+}
+
+.faq-answer {
+    display: none;
+    padding: 1rem 0;
+    background-color: #F9FBFF; 
+    margin-left: 60px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+}
+
+        
+        #questions {
+    background-color: #F9FBFF;
+    padding: 2rem;
+    margin: 0px; /* Adjusted margin */
+    text-align: center;
+}
+
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <section id="info">
+        <div id="infodiv">
+            <a href="info@vovance.com" style="color:white">info@vovance.com</a>
+        </div>
+    </section>
+    <header>
+
+        <div class="container">
+            <img src="download.jpg" alt="Vovance Logo" id="img">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button>Free Consultation</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <div id="hero-text">
+            <h1>Where technology<br> addresses all<br> business<br> challenges.</h1>
+            <p>We deploy contemporary technologies to your business<br> problems and turn them into the best solutions<br> possible.</p>
+            <button id="free">Free Consultation</button>
+        </div>
+        <img src="handshake.png" alt="handshake" id="handshake">
+    </section>
+    <h1 id="solvers">We're SOLVERs, we're not sellers.</h1><br><br>
+    
+    <section id="services">
+        <h2 id="navi">Navigating Development Challenges with <span style="color: #62BC9A;">Expertise</span></h2>
+        <div class="service">
+            <img class="ai" src="ai_ml.png" alt="AI-ML Development">
+            <div>
+                <h3>AI-ML Based Approach</h3>
+                <p>Redefine personalized experience for your users with AI-ML.<br> Vovance can help integrate AI and ML capabilities in existing<br> systems. Providing AI-ML powered personalized experience to<br> the customers comes with a lot many benefits for your<br> business.</p>
+            </div>
+        </div>
+        <div class="service">
+            <img class="ai" src="app_dev.png" alt="App Development">
+            <div>
+                <h3>App Development</h3>
+                <p>Our Android mobile apps and eCommerce app development services provide<br> a strong online presence for your store, with multilingual support, guest checkouts,<br> secure payment gateways, and extensive database support. These services are<br> available for smartphones, tablets, and wearable applications.</p>
+            </div>
+        </div>
+        <div class="service">
+            <img class="ai" src="ecommerce.png" alt="E-Commerce Development">
+            <div>
+                <h3>E-Commerce Development</h3>
+                <p>How do I get a strong online presence? How will my store stand<br> out? What platform would be the most beneficial for me? Is it<br> secure? We feel you. Not just the basics, we can help you with<br> make full-fledged eCommerce stores with multilingual support,<br> guest checkouts, payment gateways and more.</p>
+            </div>
+        </div>
+        <br><br>
+        <center>
+        <h1 style="color: #05284A;">We're a master of cutting-edge technologies your business needs.</h1>
+
+        <img src="magneto.png" height="90px">
+        <img src="shopify.png" height="90px">
+        <img src="nextjs.png" height="90px">
+        <img src="android.png" height="90px">
+        <img src="aiml.png" height="90px"><br>
+        <img src="wordpress.png" height="90px">
+        <img src="laravel.png" height="80px">
+        <img src="nodejs.png" height="80px">
+        <img src="ios.png" height="80px">
+        <br><br>
+    </center>
+    </section>
+
+    <section id="about">
+        <img src="aboutus.png">
+        <div style="margin-right: 80px;">
+            <h2 style="color: #62BC9A;">About Vovance</h2>
+            <h3>We're a digital-first company that <span style="color:#62BC9A">listens to<br> problems and delivers results.</span></h3>
+            <p>With a knack for leveraging the most fundamental and<br> contemporary technologies alike, we craft tailor-made<br> solutions for your eCommerce and App Development<br> needs. Our extensive experience comes handy for<br> making the best use of the software you've already<br> deployed to create unparalleled web solutions out of<br> those</p>
+            <div class="statistics">
+                <p><span style="color: #62BC9A;"><b>12+</b></span><br><span style="color: black;">Years Exp.</span></p>
+                <p><span style="color: #62BC9A;"><b>17</b></span><br><span style="color: black;">Technologies</span></p>
+                <p><span style="color: #62BC9A;"><b>2</b></span><br><span style="color: black;">Offices</span></p>
+            </div>
+            <div class="statistics">
+                <p><span style="color: #62BC9A;"><b>15+</b></span><br><span style="color: black;">Techies</span></p>
+                <p><span style="color: #62BC9A;"><b>150+</b></span><br><span style="color: black;">Projects</span></p>
+                <p><span style="color: #62BC9A;"><b>30+</b></span><br><span style="color: black;">Customers</span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="philosophy">
+        <div>
+            <h1 style="color: #62BC9A;">Philosophy</h1>
+            <h3>Customers make up the core of our <span style="color:#62BC9A">existence, persistence & experience.</span></h3>
+            <h2 style="color: #05284A;">Mission</h2>
+            <p>To listen to our customers and capitalize on technologies for delivering excellence, professionalism, strong digital signatures and transform their brand framework digitally.</p>
+            <h2 style="color: #05284A;">Vision</h2>
+            <p>To become a leading digital-first, tech-enabled, customer - oriented organization known for transforming and scaling eCommerce space.</p>
+        </div>
+        <img src="philosophy.png" id="philo">
+    </section>
+
+    <section id="questions">
+        <center><h1 style="color: #62BC9A;">Harnessing experience, agility, and client-centricity to amplify your business.</center></h1>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">1. Consultation</div>
+                <div class="faq-answer">Before associated with each other, we must know each other first. So that we can collect appropriate knowledge about your business. Our consultant unit follows a pervasive process to gather and process all required information, including Initial Needs Assessment, Requirement Gathering, Design Consultation. This includes Initial Needs Assessment, Requirement Gathering, and Design Consultation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">2. Prototyping</div>
+                <div class="faq-answer">At Vovance, we design extensive prototype model for e-commerce stores and apps that help our clients to clinch the basic concepts used to developed their projects. Things includes in prototype Wireframes, Mockups, Prototypes, and Virtual Reality Prototypes, to help clients understand the basic concepts used to develop their projects.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">3. Development</div>
+                <div class="faq-answer">The development process involves UX/UI designing, an online retail store, web development, back-end development, and mobile app development to meet the client's requirements. The clients get updated on every step of their solution's development in this process. Our motive is only to develop things which can function according to our client's requirements.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">4. QA & Testing</div>
+                <div class="faq-answer">The final step at Vovance is Quality Assurance (QA) and Testing, which ensures error-free e-commerce applications and supports clients in achieving smooth performance. It includes Integration Testing, Performance Testing, and System Testing. We help our clients in application development and launching. We provide a complete implementation of our services.</div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="clients">
+        <center><h1 id="client">Clients</h1></center>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 16</div>
+            <img src="spykar.png" style="width:100%;">
+ 
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 16</div>
+            <img src="pips.jpg" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 16</div>
+            <img src="hbg.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 16</div>
+            <img src="samarth.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 16</div>
+            <img src="caroma.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 16</div>
+            <img src="opera.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 16</div>
+            <img src="bruce.jpg" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 16</div>
+            <img src="inhealth.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 16</div>
+            <img src="lark.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 16</div>
+            <img src="healthinhue.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">11 / 16</div>
+            <img src="coop.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">12 / 16</div>
+            <img src="bcg.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">13 / 16</div>
+            <img src="black.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">14 / 16</div>
+            <img src="parts.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">15 / 16</div>
+            <img src="try.png" style="width:100%;">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">16 / 16</div>
+            <img src="vigil.png" style="width:100%;">
+
+        </div>
+        
+
+        
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</section>
+    
+
+<div style="background-color: #05386A; width: 100%; padding: 20px;">
+    <h1 style="color: white; text-align: center;">VOVANCE</h1>
+    <p style="color: white; text-align: center;">A digital-first company that seeks to fulfil your eCommerce and App Development needs through tailor-made solutions and sheer customer centricity.</p>
+
+    <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 20px;">
+        <div style="flex: 1; text-align: center;">
+            <p style="color: white;"><b>TECHNOLOGIES</b></p>
+            <p style="color: white;">Machine Learning</p>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <p style="color: white;"><b>RESOURCES</b></p>
+            <p style="color: white;"><a href="privacy_policy.htm" style="color: white; text-decoration: none;">Privacy Policy</a></p>
+            <p style="color: white;"><a href="terms_and_conditions.htm" style="color: white; text-decoration: none;">Terms and Conditions</a></p>
+            <p style="color: white;"><a href="refund_and_cancellation_policy.htm" style="color: white; text-decoration: none;">Refund & Cancellation Policy</a></p>
+            <p style="color: white;"><a href="free_consultation.htm" style="color: white; text-decoration: none;">Free Consultation →</a></p>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <p style="color: white;"><b>CONTACT US</b></p>
+            <p style="color: white;">1338 Eastbrooke Trace, Marietta, GA, 30066, USA</p>
+            <p style="color: white;">info@vovance.com</p>
+            <p style="color: white;">816 Mapple Trade Center Nr. Surdhara Circle, Thaltej, Ahmedabad, GJ 380059</p>
+        </div>
+
+    </div>
+</div>
+
+    
+
+    
+    <footer>
+        <p> VOVANCE All rights reserved</p>
+    </footer>
+
+
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    // Reset slideIndex to 1 if it exceeds the number of slides
+    if (n > slides.length + 1) {
+        slideIndex = 1;
+    }
+
+    // Reset slideIndex to the last slide if it goes before the first slide
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Remove the "active-dot" class from all dots
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active-dot");
+    }
+
+    // Display the current slide and the next 3 slides
+    for (i = 0; i < 4; i++) {
+        let index;
+        if (slideIndex + i - 1 <= slides.length) {
+            index = (slideIndex + i - 1) % slides.length;
+        } else {
+            index = (slideIndex + i - 1) % slides.length + 1;
+        }
+        if (index < 0) {
+            index += slides.length;
+        }
+        slides[index].style.display = "block";
+    }
+
+    // Add the "active-dot" class to the corresponding dot
+    dots[slideIndex - 1].classList.add("active-dot");
+}
+
+
+
+
+
+
+
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
+
+        </script>
+        
+</body>
+</html>
